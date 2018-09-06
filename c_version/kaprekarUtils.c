@@ -22,15 +22,24 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number,
  * <code>false</code> otherwise.
  */
+
+
+//what is 74
+//are "isKaprekar" and "n" both intergers 74
+//and why are the parthenses there 74
+
+//are they syntactical errors or logic or math or a combonation
+
 int isKaprekar(int n) {
 
   if(n < 1) {
-    return 1;
+    return 0;
   }
 
   int i;
   long square = n * (long) n;
   int numDigits = (int) log10(n) + 1;
+  //what is the modulus and are we supposed to change any of the math or just logic
   long modulus = 1;
   long first, second;
 
@@ -44,8 +53,7 @@ int isKaprekar(int n) {
     second = square % modulus;
 
     //test if the split makes a Kaprekar number
-    if(second > 0 &&
-       first + second == n) {
+    if(second > 0 && first + second == n) {
       return 1;
     }
   }
